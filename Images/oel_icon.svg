@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;fill:#FFFFFF;}
+	.st2{fill:none;stroke:#8FD1E5;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:#0E293D;}
+	.st4{fill:#8FD1E5;}
+	.st5{font-family:'OpenSans-Bold';}
+	.st6{font-size:22px;}
+</style>
+<g id="Ebene_1" class="st0">
+</g>
+<g id="Ebene_2" class="st0">
+	<rect x="155.6" y="374.3" class="st1" width="178.8" height="27.7"/>
+	<rect x="155.6" y="504" class="st1" width="214.4" height="27.7"/>
+	
+		<rect x="353.8" y="374.3" transform="matrix(0.9019 -0.432 0.432 0.9019 -123.1604 234.1175)" class="st1" width="200" height="27.7"/>
+	
+		<rect x="315.6" y="398.8" transform="matrix(0.7544 0.6565 -0.6565 0.7544 358.0945 -131.6973)" class="st1" width="78.9" height="27.7"/>
+</g>
+<g id="Ebene_3">
+	<path class="st2" d="M138.8,452.8l-99.3-24.5v-94.5l99.3,25.8v158.8h236.5l150-162.3l-153.5,71.3l-45-38.5l-188-1
+		c0,0,100.5,0.6,100,0.5c0-4.6,0-9.3,0-9.3v-35.5c0,0,0-3.9,0-5.2c-23.3,0-46.5,0-46.5,0"/>
+	<path class="st3" d="M521.1,454.2c-0.5-12,5-52.4,14.1-52.8c9.1-0.4,19.3,40.3,19.8,52.3c0.5,12-6.5,21.2-15.6,21.6
+		C530.3,475.6,521.6,466.2,521.1,454.2z"/>
+	<path class="st2" d="M138.8,410.7H165H138.8z"/>
+	<path class="st2" d="M138.8,494.3H165H138.8z"/>
+	<text transform="matrix(1 0 0 1 177.3335 501.6667)" class="st4 st5 st6">Min.</text>
+	<text transform="matrix(1 0 0 1 178.3337 417.9997)" class="st4 st5 st6">Max.</text>
+</g>
+</svg>

@@ -1,0 +1,722 @@
+@keyframes wave {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    50% {
+        background-position: -1200px 0px;
+    }
+
+    100% {
+        background-position: 0px 0px;
+    }
+}
+
+.size {
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+}
+
+#Container {
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    top: 105px;
+
+}
+
+#content {
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+}
+
+#Background {
+    background-image: linear-gradient(#002a4e, #0e4f80, #0e4f80);
+    width: 300px;
+    height: 450px;
+    position: absolute;
+}
+
+#Wave1 {
+    background-image: url(Images/Welle_1.png);
+    animation: wave 70s infinite;
+
+}
+
+#Wave2 {
+    background-image: url(Images/Welle_2.png);
+    animation: wave 150s infinite;
+}
+
+.wave {
+    background-size: cover;
+    background-position: 0px 0px;
+    position: absolute;
+    opacity: .5;
+    animation-timing-function: ease;
+    pointer-events: none;
+}
+
+.slided {
+    transition: left 0.5s;
+}
+
+
+
+#car {
+    width: 170px;
+    position: absolute;
+    top: 180px;
+}
+
+p,
+a {
+    margin: 0;
+}
+
+p,
+ul li,
+a {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+h1,
+h2,
+h3 {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 30px;
+}
+
+
+ul {
+    margin: 0px;
+    list-style-type: none;
+
+}
+
+.Button {
+    background-image: linear-gradient(to right, #0e3a57, #43abc0);
+    border-radius: 20px;
+}
+
+.shadow {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.61);
+}
+
+li {
+    margin-bottom: 10px;
+    padding: 5px;
+    max-width: 190px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#HomeText {
+    text-align: center;
+    position: absolute;
+    left: 170px;
+    top: 360px;
+}
+
+#HomeText .Date {
+    font-size: 10.5px;
+    margin-top: -5px;
+}
+
+#HomeText .Time {
+    font-size: 40px;
+}
+
+
+
+#HomeScreen {
+    overflow: hidden;
+}
+
+#HomeMenu {
+    position: relative;
+    left: 231px;
+    top: 100px;
+}
+
+#HomeMenu li {
+    position: relative;
+    left: -120px;
+    transition: left .2s;
+}
+
+#HomeMenu li:hover {
+    position: relative;
+    left: -120px;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    overflow: hidden;
+    background-color: rgba(14, 79, 128, 0.81);
+    width: 260px;
+    height: 410px;
+    border-radius: 10px;
+}
+
+
+table,
+tr,
+th,
+td {
+    border: 0px solid black;
+    margin: 0px;
+    padding: 0px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0;
+}
+
+
+#contentTable {
+    position: relative;
+    left: 0px;
+}
+
+.center {
+    margin: auto;
+    margin-top: 20px;
+}
+
+.centerFont {
+    text-align: center;
+}
+
+
+#HeizungBtn,
+#ReichweiteBtn,
+#FahrzeugInfoBtn,
+#MusikPlayerBtn {
+    width: 200px;
+    margin: auto;
+    padding: 0px;
+}
+
+
+#AT,
+#IT,
+#rchwtKm,
+#rchwtVb {
+    animation-delay: 500ms;
+}
+
+#IT {
+    margin-top: -15px;
+}
+
+
+.invis {
+    display: none;
+}
+
+
+
+.rs-bg-color,
+.rs-path-color {
+    background-color: transparent;
+}
+
+.rs-border {
+    border-width: 1px;
+    border-color: white;
+}
+
+.rs-handle {
+    background-color: white;
+}
+
+.rs-tooltip-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Nanum Gothic', sans-serif;
+    width: 50px;
+    height: 8px;
+}
+
+.rs-control circle {
+    stroke: #43abc0;
+}
+
+.rs-control .rs-path-color,
+.rs-control .rs-bg-color {
+    background-color: transparent;
+}
+
+
+
+.luckenfuller {
+    width: 15px;
+    height: 15px;
+    background-color: #43abc0;
+    position: relative;
+    left: 50px;
+    bottom: 8px;
+    border-radius: 100%;
+}
+
+#StartEngine {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 100%;
+    border: 20px solid #03293e;
+    overflow: hidden;
+    transform: scale(0.8);
+}
+
+
+.horizGradient {
+    background-image: linear-gradient(to right, #0e3a57, #43abc0);
+}
+
+.horizGradientInverse {
+    background-image: linear-gradient(to left, #0e3a57, #43abc0);
+}
+
+#StartEngine div {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    border: 2px solid #03293e;
+    margin: auto;
+    margin-top: 8px;
+    text-align: center;
+    transform: scale(1);
+    transition: transform .1s;
+}
+
+
+
+#StartEngine div p {
+    display: block;
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+#akkuTop {
+    height: 12.87px;
+    width: 60px;
+    border-radius: 15px;
+    background-color: #84e2f2;
+    margin: 0 auto;
+}
+
+
+#akkuSymbol {
+    height: 230px;
+    width: 166px;
+    border-radius: 15px;
+    border: 5px solid #84e2f2;
+    margin: 0 auto;
+    margin-top: -5px;
+    overflow: hidden;
+}
+
+#akkuFuellung {
+    height: 230px;
+    width: 166px;
+    background-color: #84e2f2;
+    border: 5px solid #84e2f2;
+    transform-origin: bottom;
+    transform: scale(1, 0.0);
+    transition: transform 1.2s;
+}
+
+
+#km {
+    margin: 11px auto;
+}
+
+#verbleibend {
+    margin: -11px auto;
+}
+
+
+#map_ladestation,
+#map_werkstatt {
+    height: 395px;
+    width: 262px;
+}
+
+#marker {
+    position: absolute;
+    top: 140px;
+    left: 780px;
+    animation-duration: 0.7s;
+    animation-delay: 0s;
+}
+
+#buttonNavStart {
+    background-image: linear-gradient(to right, #0e3a57, #43abc0);
+    border-radius: 21.5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.61);
+    position: absolute;
+    top: 366px;
+    left: 944px;
+    height: 43px;
+    width: 214px;
+    text-align: center;
+    display: table;
+}
+
+#navStart {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#buttonNavStart2 {
+    background-image: linear-gradient(to right, #0e3a57, #43abc0);
+    border-radius: 21.5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.61);
+    position: absolute;
+    top: 366px;
+    left: 642px;
+    height: 43px;
+    width: 214px;
+    text-align: center;
+    display: table;
+}
+
+#navStart2 {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#buttonWerkstattFinden {
+    background-image: linear-gradient(to right, #0e3a57, #43abc0);
+    border-radius: 21.5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.61);
+    position: absolute;
+    top: 366px;
+    left: 642px;
+    height: 43px;
+    width: 214px;
+    text-align: center;
+    display: table;
+    cursor: pointer;
+}
+
+#buttonWerkstattFinden div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#map_werkstatt {
+    height: 395px;
+    width: 262px;
+}
+
+
+
+.bildMusik {
+    margin: auto;
+    display: block;
+    height: 185px;
+    width: auto;
+}
+
+.playButton {
+    margin: auto;
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    transform: scale(.8);
+    background: linear-gradient(to right, rgb(14, 58, 87) 0%, rgb(67, 171, 192) 100%);
+    transition: transform .2s;
+    color: white;
+    font-size: 50px;
+    text-align: justify;
+    margin-top: -10px;
+}
+
+.playButton:hover {
+    cursor: pointer;
+}
+
+
+
+#pause {
+    width: 70px;
+    height: 51px;
+    background-image: url("Images/Pause.png");
+    background-size: 70px 64px;
+    margin: auto;
+    position: relative;
+    top: 11px;
+}
+
+#play {
+    width: 70px;
+    height: 70px;
+    background-image: url("Images/Play.png");
+    background-size: 70px 70px;
+    margin: auto;
+    position: relative;
+    top: 5px;
+    left: 3px;
+}
+
+
+.playButton:hover {
+    transform: scale(.86);
+}
+
+.playButton span {
+    position: relative;
+}
+
+
+.playPfeil {
+    margin-top: -50px;
+    margin-left: 115px;
+}
+
+
+
+.weiterPfeil1 {
+    width: 0px;
+    height: 0px;
+    transform: rotate(360deg);
+    border-style: solid;
+    border-width: 10px 20px 10px;
+    border-color: transparent transparent transparent white;
+    margin-left: 203px;
+    margin-top: -30px;
+}
+
+.weiterPfeil2 {
+    width: 0px;
+    height: 0px;
+    transform: rotate(360deg);
+    border-style: solid;
+    border-width: 10px 20px 10px;
+    border-color: transparent transparent transparent white;
+    margin-left: 187px;
+    margin-top: -20px;
+}
+
+.zuruckPfeil1 {
+    width: 0px;
+    height: 0px;
+    transform: rotate(180deg);
+    border-style: solid;
+    border-width: 10px 20px 10px;
+    border-color: transparent transparent transparent white;
+    margin-left: 19px;
+    margin-top: -19px;
+}
+
+.zuruckPfeil2 {
+    width: 0px;
+    height: 0px;
+    transform: rotate(180deg);
+    border-style: solid;
+    border-width: 10px 20px 10px;
+    border-color: transparent transparent transparent white;
+    margin-left: 35px;
+    margin-top: -20px;
+}
+
+#Musik-Timeline {
+    width: 188px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #43abc0;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+#Timeline-White {
+    height: 1em;
+    width: 0px;
+    background-color: white;
+    margin-bottom: 0px;
+}
+
+#cti {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 100%;
+    position: relative;
+    bottom: 12px;
+    left: 38px;
+    margin: -5px;
+    padding: 0px;
+}
+
+
+.radarChart {
+    position: absolute;
+    top: 50px;
+    left: 575px;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: white;
+    transform: scale(0);
+    transition: all 0.8s;
+    opacity: 0;
+}
+
+.radarChart.statsAnimation {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+#distanz {
+    margin: 250px auto;
+}
+
+#kmpm {
+    margin: -253px auto;
+}
+
+
+#oilIcon {
+    width: 250px;
+    height: 500px;
+    opacity: 1.0;
+    top: -15px;
+    left: 625px;
+    position: absolute;
+}
+
+#parallelogramm {
+    position: absolute;
+    top: 257px;
+    left: 685px;
+    overflow: hidden;
+}
+
+#paraInner {
+    width: 160px;
+    height: 18px;
+    margin: 0 0 0 -50px;
+    -webkit-transform: skew(137deg);
+    -moz-transform: skew(137deg);
+    -o-transform: skew(137deg);
+    background: #0e293d;
+}
+
+#oilWave {
+    height: 8px;
+    width: 117px;
+    overflow: hidden;
+    position: absolute;
+    top: 250px;
+    left: 685px;
+}
+
+#waveShape {
+    animation-name: waveAction;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+}
+
+@keyframes waveAction {
+    0% {
+        transform: translate(-150px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+#oelok {
+    margin: 240px auto;
+}
+
+
+#render {
+    background-image: url(Images/Render.png);
+    background-size: contain;
+    z-index: -1;
+    width: 684px;
+    height: 683px;
+    margin: auto;
+    margin-top: -450px;
+    overflow: hidden;
+}
+
+#render #return {
+    width: 80px;
+    height: 60px;
+    border-radius: 100%;
+    margin: auto;
+    margin-top: 570px;
+    cursor: pointer;
+}
+
+#homeButton {
+    width: 70px;
+    height: 60px;
+    position: absolute;
+    top: 576px;
+    left: 926px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+#InspektionAuto {
+    background-image: url(Images/auto.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 30px;
+    margin: auto;
+    margin-bottom: -10px;
+}
+
+#InspektionWerkzeug {
+    background-image: url(Images/werkz.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 30px;
+    position: relative;
+    right: 20px;
+}
+
+.opc {
+    opacity: 0;
+}

@@ -1,0 +1,380 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>App Simulation</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="Frameworks/jquery-3.3.1.min.js"></script>
+    <script src="Frameworks/jquery.pause.js"></script>
+    <link rel="stylesheet" href="Frameworks/animate.css">
+    <link href="Frameworks/roundSlider-1.3.2/src/roundslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
+    <script src="Frameworks/roundSlider-1.3.2/src/roundslider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <script src="script.js"></script>
+    <script src="Frameworks/radarChart.js"></script>
+</head>
+
+
+
+
+<body>
+
+
+
+    <div id="Container" class="size">
+        <div id="content" class="size">
+            <table id="contentTable" class="slided">
+                <tr>
+                    <td>
+                        <!--Ebene 1-->
+                        <div id="HomeScreen" class="size">
+                            <img src="Images/Car.png" id="car">
+                            <div id="HomeText">
+                                <p class="Time">16:13</p>
+                                <p class="Date">Montag, 19. November</p>
+                            </div>
+                            <ul id="HomeMenu">
+                                <a href="#"
+                                    onClick="slideLeft('#contentTable'); showContent('#MotorStarten'); animateMotorStarten()">
+                                    <li class="Button shadow">&nbsp;&nbsp;&nbsp;&nbsp;Motor Starten</li>
+                                </a>
+                                <a href="#"
+                                    onClick="slideLeft('#contentTable'); showContent('#Reichweite'); animateRchwBtns();">
+                                    <li class="Button shadow">&nbsp;&nbsp;&nbsp;&nbsp;Reichweite</li>
+                                </a>
+                                <a href="#"
+                                    onClick="slideLeft('#contentTable'); showContent('#Heizung'); animateHZBtns();">
+                                    <li class="Button shadow">&nbsp;&nbsp;&nbsp;&nbsp;Heizung</li>
+                                </a>
+                                <a href="#"
+                                    onClick="slideLeft('#contentTable'); showContent('#Musik'); animateMusikPlaylist();">
+                                    <li class="Button shadow">&nbsp;&nbsp;&nbsp;&nbsp;Musik</li>
+                                </a>
+                                <a href="#"
+                                    onClick="slideLeft('#contentTable'); showContent('#FahrzeugInfo'); animateInfoBtns();">
+                                    <li class="Button shadow">&nbsp;&nbsp;&nbsp;&nbsp;Fahrzeug Info</li>
+                                </a>
+
+
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <!--Ebene 2-->
+                        <div id="Heizung" class="size invis">
+                            <div class="blue center shadow">
+                                <h1 class="centerFont">Heizung</h1>
+                                <br>
+                                <ul id="HeizungBtn" class="centerFont">
+                                    <li class="Button shadow invis"><a href="#"
+                                            onClick="slideLeft('#contentTable'); showContent('#Temperatur');animateSlidersIn();">Temperatur</a>
+                                    </li>
+                                    <li class="Button shadow invis"><a href="#" onClick="">Timer</a></li>
+                                    <li class="Button shadow invis"><a href="#" onClick="">Voreinstellung</a></li>
+                                </ul>
+
+                                <br>
+                                <br>
+                                <br>
+                                <p id="AT" class="centerFont">22 &deg;C &nbsp;Außentemperatur</p>
+                                <br>
+                                <p id="IT" class="centerFont">9 &deg;C &nbsp;Innentemperatur</p>
+                            </div>
+
+                        </div>
+
+
+                        <div id="MotorStarten" class="size invis">
+                            <div class="blue center shadow">
+                                <h1 class="centerFont">Motor Starten</h1>
+
+                                <div id="StartEngine" class="center">
+                                    <div id="grad" onClick="animateStartEngine();" class="horizGradient">
+                                        <p id="engineText" class="noselect"
+                                            style="text-shadow: 0px 0px 5px rgba(0,0,0,0.5)" onclick="engine()">
+                                            Start<br>Engine</p>
+                                    </div>
+                                </div>
+                                <p class="centerFont" id="EngineStatus">Motor ist aus</p>
+                            </div>
+
+                        </div>
+
+                        <div id="FahrzeugInfo" class="size invis">
+                            <div class="blue center shadow">
+                                <h1 class="centerFont">Fahrzeug Info</h1>
+                                <br>
+                                <ul id="FahrzeugInfoBtn" class="centerFont">
+                                    <li class="Button shadow invis"><a href="#" onClick="">Kilometerstand</a></li>
+                                    <li class="Button shadow invis"><a href="#"
+                                            onClick="slideLeft('#contentTable'); showContent('#OelStand');">Ölstand</a>
+                                    </li>
+                                    <li class="Button shadow invis"><a href="#"
+                                            onClick="slideLeft('#contentTable');showContent('#Inspektion');animateInspektionAuto();">Inspektion</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="Reichweite" class="size invis">
+                            <div class="blue center shadow">
+                                <h1 class="centerFont">Reichweite</h1>
+                                <br>
+                                <ul id="ReichweiteBtn" class="centerFont">
+                                    <li class="Button shadow invis"><a href="#"
+                                            onClick="slideLeft('#contentTable'); showContent('#Akkustand');animateSlidersIn();animateAkku();">Akkustand</a>
+                                    </li>
+                                    <li class="Button shadow invis"><a href="#"
+                                            onClick="slideLeft('#contentTable'); showContent('#Statistiken');animateSlidersIn();setUpStats();animateStats();">Statistiken</a>
+                                    </li>
+                                    <li class="Button shadow invis"><a href="#"
+                                            onClick="slideLeft('#contentTable'); showContent('#Ladestation');animateSlidersIn();">Ladestation</a>
+                                    </li>
+                                </ul>
+
+                                <br>
+                                <br>
+                                <p id="rchwtKm" class="centerFont">223 km</p>
+                                <p id="rchwtVb" class="centerFont">verbleibend</p>
+                            </div>
+
+                        </div>
+
+                        <div id="Musik" class="size invis">
+                            <div class="blue center shadow">
+                                <h1 class="centerFont">Playlist</h1>
+                                <br>
+                                <ul id="MusikPlayerBtn" class="centerFont">
+                                    <li class="Button shadow invis"><a href="#"
+                                            onClick="slideLeft('#contentTable'); showContent('#MusikAuswahl');animateMusikPlayer();audioPlayer();">
+                                            <p style="font-size: 18px">Rick Astley</p>
+                                            <p style="font-size: 12px">Never Gonna Give You Up</p>
+                                        </a></li>
+                                    <li class="Button shadow invis">
+                                        <p style="font-size: 18px">Helene Fischer</p>
+                                        <p style="font-size: 12px">Atemlos</p>
+                                        </a>
+                                    </li>
+                                    <li class="Button shadow invis">
+                                        <p style="font-size: 18px">Psy</p>
+                                        <p style="font-size: 12px">Gangnam Style</p>
+                                        </a>
+                                    </li>
+                                    <li class="Button shadow invis">
+                                        <p style="font-size: 18px">Tokio Hotel</p>
+                                        <p style="font-size: 12px">Durch den Monsun</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+
+
+                    <td>
+                        <!--Ebene 3-->
+                        <div id="Akkustand" class="size invis">
+                            <div class="blue center shadow">
+
+                                <h1 class="centerFont">Akkustand</h1>
+
+                                <div id="akkuTop"></div>
+                                <div id="akkuSymbol">
+                                    <div id="akkuFuellung"></div>
+                                </div>
+
+
+                                <p id="km" class="centerFont">223 km</p>
+                                <p id="verbleibend" class="centerFont">verbleibend</p>
+
+                            </div>
+
+                        </div>
+
+                        <div id="OelStand" class="size invis">
+                            <div class="blue center shadow">
+
+                                <h1 class="centerFont">Ölstand</h1>
+
+
+                                <div id="parallelogramm">
+                                    <div id="paraInner"></div>
+                                </div>
+                                <div id="oilWave">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="300px" height="300px"
+                                        viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+                                        <path fill="#0e293d" id="waveShape"
+                                            d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
+                                    </svg>
+                                </div>
+
+                                <img src="Images/oel_icon.svg" id="oilIcon">
+
+                                <p id="oelok" class="centerFont">Ölstand OK</p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Inspektion -->
+                        <div id="Inspektion" class="size invis">
+                            <div class="blue center shadow">
+
+                                <h1 class="centerFont">Inspektion</h1>
+                                <br><br>
+                                <div>
+                                    <div id="InspektionAuto"></div>
+                                    <hr style="border: 3px solid #84E2F2; width: 230px; border-radius: 3px;">
+                                    <div id="InspektionWerkzeug" style="position: relative; left: 215px; bottom: 45px;">
+                                    </div>
+                                    <br>
+                                    <p class="centerFont" style="font-size: 23px;">Inspektion nötig<br>in 300 km</p>
+                                    <a href="#" id="buttonWerkstattFinden"
+                                        onClick="slideLeft('#contentTable'); showContent('#Werkstatt');initMap();">
+                                        <div>Werkstatt finden</div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="MusikAuswahl" class="size invis">
+                            <div class="blue center shadow">
+
+                                <h1 class="centerFont">Musik Player</h1>
+
+                                <div>
+                                    <img class="bildMusik shadow" src="Images/MusikBild.jpg" alt="astley">
+                                    <p class="centerFont" style="font-size: 10.4px; margin: 8px">Rick Astley - Never
+                                        Gonna Give You Up</p>
+                                    <div id="Musik-Timeline" class="center shadow">
+                                        <div id="Timeline-White"></div>
+                                    </div>
+                                    <div class="shadow" id="cti"></div>
+                                    <div class="playButton shadow noselect" onclick="audioPlayerPause();">
+                                        <div class="invis" id="play"></div>
+                                        <div id="pause"></div>
+                                    </div>
+                                    <div class="playPfeil"></div>
+                                    <div class="weiterPfeil1"></div>
+                                    <div class="weiterPfeil2"></div>
+                                    <div class="zuruckPfeil1"></div>
+                                    <div class="zuruckPfeil2"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </td>
+
+
+
+                    <td>
+                        <!--Ebene 4-->
+                        <div id="Statistiken" class="size invis">
+                            <div class="blue center shadow">
+
+                                <h1 class="centerFont">Statistiken</h1>
+
+                                <div class="radarChart" id="radarStats"></div>
+
+                                <p id="distanz" class="centerFont">Distanz</p>
+                                <p id="kmpm" class="centerFont">in km / Monat</p>
+
+                            </div>
+
+                        </div>
+
+                        <div id="Werkstatt" class="size invis">
+                            <div class="blue center shadow">
+
+                                <h1 class="centerFont">Werkstatt</h1>
+
+                                <div id="map_werkstatt"></div>
+
+                                <a href="#" id="buttonNavStart">
+                                    <div id="navStart">Navigation starten</div>
+                                </a>
+
+
+
+                            </div>
+
+                        </div>
+                    </td>
+
+
+                    <td>
+                        <!--Ebene 5-->
+                        <div id="Ladestation" class="size invis">
+                            <div class="blue center shadow">
+
+                                <h1 class="centerFont">Ladestation</h1>
+
+                                <div id="map_ladestation"></div>
+
+                                <a href="#" id="buttonNavStart2">
+                                    <div id="navStart2">Navigation starten</div>
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </td>
+
+
+                    <td>
+                        <div id="Temperatur" class="size invis">
+                            <div class="blue center shadow">
+
+                                <h1 class="centerFont">Temperatur</h1>
+                                <div id="TempSlider1" class="invis">
+                                    <p class="centerFont">Heizung</p>
+                                    <div id="slider" class="center"></div>
+                                    <div class="luckenfuller"></div>
+                                </div>
+                                <br>
+                                <div id="TempSlider2" class="invis">
+                                    <p class="centerFont">Sitzheizung</p>
+                                    <div id="slider2" class="center"></div>
+                                    <div class="luckenfuller"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+
+
+
+                </tr>
+            </table>
+        </div>
+
+
+        <div id="Background">
+            <div id="Wave1" class="size wave">
+            </div>
+            <div id="Wave2" class="size wave">
+            </div>
+        </div>
+    </div>
+    <div id="render">
+        <div id="return" onClick="slideRight('#contentTable');"></div>
+    </div>
+
+    <!--Google Maps API-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJhdhh_cHtUZ9i0ICAUeyKTNg1SQZt_uo&callback=initMap"
+        async defer></script>
+
+</body>
+
+</html>
